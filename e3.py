@@ -1,24 +1,29 @@
-datos = [
-    (2022, [13.6, 13.4, 13.2, 13.4, 13.9, 13.7, 13.7, 13.8, 14, 14.3, 16, 15.1, 14]),
-    (2021, [13.3, 12.9, 13.5, 13.5, 13.7, 13.8, 13.8, 13.8, 14.2, 14.6, 16.8, 14.7, 14.1]),
-    (2020, [14.4, 13.9, 13.6, 13.5, 13.7, 13.9, 13.9, 14, 14.3, 14.7, 15.6, 14.6, 14.2]),
-    (2019, [13.9, 12.5, 13.3, 13.4, 14, 13.9, 13.8, 13.9, 14.5, 14.9, 15.5, 15.4, 14.1]),
-    (2018, [13.2, 12.7, 12.3, 12.9, 13.8, 13.9, 14, 14.1, 14.3, 17.9, 17.7, 15.9, 14.4]),
-    (2017, [13.7, 12.8, 13.4, 13.9, 14, 14, 13.9, 14, 14, 14.6, 14.8, 13.3, 13.9]),
-    (2016, [14.1, 13.6, 12.9, 13.5, 14, 13.9, 14, 14, 14.2, 16.3, 16.5, 15.6, 14.4]),
-    (2015, [14.1, 12.6, 12.9, 13.5, 14.3, 13.9, 13.7, 13.8, 14.1, 15.8, 15.8, 15.1, 14.1]),
-    (2014, [13.7, 13.2, 13.6, 13.6, 14.7, 14.2, 13.9, 14, 14.5, 15.7, 16.5, 16, 14.5]),
-    (2013, [13.2, 12.2, 12, 13.1, 13.5, 14.1, 13.7, 13.6, 13.6, 15.3, 15.9, 13.6, 13.7]),
-    (2012, [13.9, 12.4, 12.6, 13.3, 13.7, 13.5, 13.5, 13.7, 13.9, 14.8, 15.8, 13.9, 13.8]),
-    (2011, [13, 12.5, 12.5, 13.6, 13.5, 14, 14.1, 13.7, 13.8, 15.2, 17.6, 15.9, 14.1]),
-    (2010, [12.6, 11.9, 12.2, 12.8, 13.7, 13.6, 13.5, 13.5, 13.9, 15.6, 15.5, 14, 13.6]),
-    (2009, [13.3, 12.5, 12.6, 12.8, 14.2, 13.7, 13.7, 13.8, 14, 16.2, 15.9, 14.5, 13.9]),
-    (2008, [13.2, 13, 12.9, 12.8, 13.3, 13.6, 13.7, 13.8, 13.9, 14.3, 15.5, 13.8, 13.7]),
-    (2007, [14.3, 13.4, 13.2, 13.4, 14.4, 13.8, 13.8, 13.8, 14, 15.5, 15.5, 13.9, 14.1]),
-    (2006, [12.5, 12.3, 12.1, 12.9, 13.1, 13.4, 13.2, 13.2, 14, 15.5, 17.3, 15.8, 13.8]),
-    (2005, [13.3, 12.3, 12.3, 12.9, 13.4, 13.3, 13.3, 13.4, 13.9, 15.2, 17.1, 14.4, 13.7]),
-    (2004, [13.5, 12.7, 12.3, 12.6, 13.2, 13.1, 13.3, 13.6, 14.9, 15.3, 15.4, 14.6, 13.7]),
-    (2003, [13.6, 12.2, 12.5, 12.8, 14.7, 13.5, 13.6, 13.7, 14.2, 15.9, 15.3, 15, 13.9]),
-    (2002, [13.2, 12.4, 12.9, 13.4, 13.7, 13.6, 14.4, 13.8, 14.3, 14.8, 15.3, 14.2, 13.8]),
-    (2001, [13.8, 13, 12.6, 13.6, 13.5, 13.4, 14, 14, 14.2, 15.3, 16.8, 14, 14]),
-]
+"""
+Arnau Fernández Pinar
+Matteo Vilchez
+E3.Programa de traducció d’insults. Crear una estructura de dues dimensions amb els insults en català i afegir la traducció en castellà, anglès i klingon
+El programa, demanarà a l’usuari que escrigui per teclat un insult, en català, i el mostrarà traduït a castellà, anglès i klingon.
+23/01/2024
+"""
+try:
+    Catalan=["capsigrany","borinot","mitja merda","figaflor"]
+    Castellano=["alcaudón","moscardón","media mierda","breva"]
+    Ingles=["shrike","blowfly","half a shit","breva"]
+    Klingon=["mup","SuS","boD","Sep"]
+    Insulto=str(input("Introduce un insulto: ")).lower()
+    if Insulto in Catalan:
+        index= Catalan.index(Insulto)
+        print(Castellano[index],Ingles[index],Klingon[index])
+    elif Insulto in Castellano:
+        index2= Castellano.index(Insulto)
+        print(Catalan[index2],Ingles[index2],Klingon[index2])
+    elif Insulto in Ingles:
+        index3= Ingles.index(Insulto)
+        print(Catalan[index3],Castellano[index3],Klingon[index3])
+    elif Insulto in Ingles:
+        index4= Klingon.index(Insulto)
+        print(Catalan[index4],Castellano[index4],Ingles[index4])
+    else:
+        print("No tiene traducción")
+except:
+    print("Error no Existe")
